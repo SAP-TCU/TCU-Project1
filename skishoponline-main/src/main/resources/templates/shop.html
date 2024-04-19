@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/shop.css}">
+    <link rel="stylesheet" th:href="@{/css/label.css}">
+    <script th:src="@{/js/shop.js}"></script>
+    <title>Shop | Snow</title>
+</head>
+<body>
+<header th:replace="~{template :: base-header}"></header>
+
+<div class="sales-label">
+    <h1>Up to 50% Sales!!!</h1>
+</div>
+
+<h1 id="shop-title">Shop Section</h1>
+
+<div class="card-container">
+    <div class="card" th:each="product: ${products}">
+        <img th:src="${product.getImageUrl()}" alt="Product Image">
+        <div class="card-info">
+            <h2 th:text="${product.getName()}"></h2>
+            <p th:text="${product.description}"></p>
+            <p class="price" th:text="${product.getPrice()}"></p>
+            <div class="card-bottom">
+                <input id="quantityInput" type="number" class="quantity-input" th:value="1" th:min="1" th:max="${product.getQuantity()}">
+                <button class="buy-button" th:onclick="'performBuy(this, ' + ${cartId} + ', ' + ${product.getId()} + ')'">Buy</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer th:replace="~{template :: base-footer}"></footer>
+</body>
+</html>

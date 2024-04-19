@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <header th:fragment="base-header">
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo">SN<span class="snowflake">&#10052;</span>W</div>
+                <p class="slogan">Face the winter</p>
+            </div>
+        </div>
+        <nav th:fragment="base-header">
+            <ul>
+                <li><a href="/pages/home">Home</a></li>
+                <li><a href="/pages/shop">Shop</a></li>
+                <li><a href="/pages/about">About</a></li>
+                <li><a href="/pages/contact">Contact</a></li>
+                <li><a href="/pages/cart">Cart</a></li>
+                <li><a href="/pages/auth/login" target="_blank">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <header th:fragment="base-header-no-navigation">
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo">SN<span class="snowflake">&#10052;</span>W</div>
+                <p class="slogan">Face the winter</p>
+            </div>
+        </div>
+    </header>
+
+    <footer th:fragment="base-footer">
+        <div class="container">
+            <p>&copy; 2024 Online Shop. All rights reserved.</p>
+        </div>
+    </footer>
+</html>

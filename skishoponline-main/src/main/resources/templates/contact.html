@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/contact.css}">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <title>Contact | Snow</title>
+</head>
+<body>
+<header th:replace="~{template :: base-header}"></header>
+
+<section class="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <div class="info-item">
+                <div class="icon">&#9742;</div>
+                <div class="info">Phone: +359 123-456-7890</div>
+            </div>
+            <div class="info-item">
+                <div class="icon">&#9993;</div>
+                <div class="info"><A HREF="mailto: bobovlahov@gmail.com">Mail</A></div>
+            </div>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com/" class="icon" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png"></a>
+            <a href="https://www.tiktok.com/" class="icon" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0ooN5BBdPzNJkEdAhc0fC_eS9s_dTOIXNUIxjCv-CBA&s"></a>
+            <a href="https://www.instagram.com/" class="icon" target="_blank"><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
+        </div>
+    </div>
+</section>
+
+<footer th:replace="~{template :: base-footer}"></footer>
+</body>
+</html>
