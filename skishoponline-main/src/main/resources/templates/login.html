@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <title>Log in | Snow</title>
+</head>
+<body>
+<header th:replace="~{template :: base-header}"></header>
+
+<form action="/pages/auth/login" method="post">
+    <div class="container_login">
+        <div class="login-box">
+            <div class="login-header">Login</div>
+            <input type="text" name="username" class="login-input" placeholder="Username">
+            <input type="password" name="password" class="login-input" placeholder="Password">
+            <button type="submit" class="login-button">Login</button>
+            <p class="signup-text">Don't have an account? <a th:href="@{/pages/auth/signup}">Sign up</a></p>
+
+        </div>
+    </div>
+</form>
+
+<footer th:replace="~{template :: base-footer}"></footer>
+</body>
+</html>

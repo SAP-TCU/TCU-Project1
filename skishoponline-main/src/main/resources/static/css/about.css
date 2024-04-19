@@ -1,0 +1,16 @@
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 60px;
+}
+
+.about-content {
+    margin-top: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+

@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 35px 0;
+    position: relative;
+
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.logo {
+    font-size: 72px;
+    font-weight: bold;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-top: -30px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.snowflake {
+    font-size: 100px;
+    color: white;
+    position: relative;
+    top: 10px;
+}
+
+.slogan {
+    color: #f2f2f2;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+nav ul li:last-child {
+    margin-right: 20px;
+}
+
+nav ul li:last-child a {
+    background-color: #007bff;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav ul li:last-child a:hover {
+    background-color: #0056b3;
+}
+
+
+

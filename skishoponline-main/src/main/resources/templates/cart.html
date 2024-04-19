@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/cart.css}">
+    <script th:src="@{/js/cart.js}"></script>
+    <title>Home | Snow</title>
+</head>
+<body>
+<header th:replace="~{template :: base-header}"></header>
+
+<h2 id="empty-cart" th:if="${cartItems.size() == 0}">Your shopping cart is empty, <a href="/pages/shop">add</a> some items.</h2>
+<div class="cart-items-table" th:if="${cartItems.size() != 0}">
+    <table>
+        <thead>
+        <tr>
+            <th>Product</th>
+            <th>Type</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr th:each="cartItem: ${cartItems}">
+                <td th:text="${cartItem.getProduct().getName()}"></td>
+                <td th:text="${cartItem.getProduct().getType().getValue()}"></td>
+                <td th:text="${cartItem.getProduct().getPrice()}"></td>
+                <td th:text="${cartItem.getQuantity()}"></td>
+                <td th:text="${cartItem.getProduct().getPrice() * cartItem.getQuantity()}"></td>
+                <td>
+                    <button class="btn btn-edit" onclick="editRecord()">Edit</button>
+                    <button class="btn btn-remove" th:onclick="'deleteRecord(' + ${cartItem.getCart().getId()} + ', ' + ${cartItem.getProduct().getId()} + ', ' + ${cartItem.getQuantity()}+ ')'">Remove</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p id="price-total" th:text="'Price Total: ' + ${cartItems.get(0).getCart().getPriceTotal()}"></p>
+</div>
+
+<footer th:replace="~{template :: base-footer}"></footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/signup.css}">
+    <script th:src="@{/js/signup.js}"></script>
+    <title>Sign up | Snow</title>
+</head>
+<body>
+<header th:replace="~{template :: base-header}"></header>
+
+<div class="container_login">
+    <div class="login-box">
+        <div class="login-header">Sign up</div>
+            <input type="text" id="firstName" class="login-input" placeholder="First name" required>
+            <input type="text" id="lastName" class="login-input" placeholder="Last name" required>
+            <input type="text" id="username" class="login-input" placeholder="Username" required>
+            <input type="text" id="email" class="login-input" placeholder="Email" required>
+            <input type="password" id="password" class="login-input" placeholder="Password" required>
+            <input type="text" id="phoneNumber" class="login-input" placeholder="Phone number" required>
+            <button class="login-button" onclick="submit()">Sign up</button>
+    </div>
+</div>
+<footer th:replace="~{template :: base-footer}"></footer>
+</body>
+</html>
